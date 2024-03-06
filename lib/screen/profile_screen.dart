@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project/screen/login_page.dart';
+import 'package:project/screen/timer.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -51,22 +52,26 @@ class _ProfilePageState extends State<ProfilePage> {
             itemProfile('Department', 'CSE', CupertinoIcons.phone),
             const SizedBox(height: 10),
             itemProfile('Blood Group', 'AB(+ve)', CupertinoIcons.mail),
+            const SizedBox(height: 10),
+            itemProfile('Course Title', 'Mobile Application Development',
+                CupertinoIcons.mail),
             const SizedBox(
               height: 20,
             ),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.all(15),
-                ),
-                child: const Text(
-                  'User Track',
-                  style: TextStyle(fontSize: 18),
-                ),
-              ),
-            )
+            const TimerWidget(),
+            // SizedBox(
+            //   width: double.infinity,
+            //   child: ElevatedButton(
+            //     onPressed: () {},
+            //     style: ElevatedButton.styleFrom(
+            //       padding: const EdgeInsets.all(15),
+            //     ),
+            //     child: const Text(
+            //       'User Track',
+            //       style: TextStyle(fontSize: 18),
+            //     ),
+            //   ),
+            // )
           ],
         ),
       ),
